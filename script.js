@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
+  initCurrentPageNav();
   initActiveNavObserver();
   initContactForm();
   initBackToTop();
@@ -13,11 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * 1. Menu Mobile (Drawer & Accessibilité ARIA)
+ * 1. Menu Hamburger & Tiroir Slide-over (Accessibilité ARIA, Mobile & Desktop)
  */
 function initMobileMenu() {
   const menuToggle = document.getElementById('menu-toggle');
   const mobileNav = document.getElementById('mobile-nav');
+  const menuClose = document.getElementById('menu-close');
+  const navBackdrop = document.getElementById('nav-backdrop');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-footer a');
 
   if (!menuToggle || !mobileNav) return;
@@ -27,10 +30,32 @@ function initMobileMenu() {
     menuToggle.setAttribute('aria-expanded', String(isOpen));
     mobileNav.setAttribute('aria-hidden', String(!isOpen));
     mobileNav.classList.toggle('open', isOpen);
+    if (navBackdrop) {
+      navBackdrop.setAttribute('aria-hidden', String(!isOpen));
+      navBackdrop.classList.toggle('open', isOpen);
+    }
     document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (isOpen && menuClose) {
+      menuClose.focus();
+    }
   };
 
-  menuToggle.addEventListener('click', () => toggleMenu());
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  if (menuClose) {
+    menuClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu(false);
+      menuToggle.focus();
+    });
+  }
+
+  if (navBackdrop) {
+    navBackdrop.addEventListener('click', () => toggleMenu(false));
+  }
 
   // Fermer le menu lors du clic sur un lien
   mobileLinks.forEach(link => {
@@ -47,13 +72,39 @@ function initMobileMenu() {
 }
 
 /**
- * 2. Suivi de la section active lors du défilement (IntersectionObserver)
+ * 2. Détection & Marquage de la Page Courante
+ */
+function initCurrentPageNav() {
+  const path = window.location.pathname.toLowerCase();
+  let currentPage = 'index';
+
+  if (path.includes('philosophie')) currentPage = 'philosophie';
+  else if (path.includes('activites')) currentPage = 'activites';
+  else if (path.includes('infos')) currentPage = 'infos';
+  else if (path.includes('contact')) currentPage = 'contact';
+  else if (path.includes('mentions')) currentPage = 'mentions';
+
+  document.querySelectorAll(`[data-page="${currentPage}"]`).forEach(el => {
+    el.classList.add('active');
+    el.setAttribute('aria-current', 'page');
+  });
+}
+
+/**
+ * 3. Suivi de la section active lors du défilement (sur page d'accueil ou ancres)
  */
 function initActiveNavObserver() {
   const sections = document.querySelectorAll('section[id]');
   const desktopLinks = document.querySelectorAll('.desktop-nav .nav-link');
 
   if (!sections.length || !desktopLinks.length || !('IntersectionObserver' in window)) return;
+  // Ne pas écraser les liens multi-pages si le href mène à un fichier .html
+  const anchorLinks = Array.from(desktopLinks).filter(link => {
+    const href = link.getAttribute('href');
+    return href && href.startsWith('#');
+  });
+
+  if (!anchorLinks.length) return;
 
   const observerOptions = {
     root: null,
@@ -65,7 +116,7 @@ function initActiveNavObserver() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-        desktopLinks.forEach(link => {
+        anchorLinks.forEach(link => {
           const href = link.getAttribute('href');
           if (href === `#${id}`) {
             link.classList.add('active');

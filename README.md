@@ -36,13 +36,18 @@ L'association **37dimensions** démocratise l'accès à :
 
 ---
 
-## 📂 Structure du Répertoire
+## 📂 Structure du Répertoire (Site Multi-pages)
 
 ```
 .
-├── index.html            # Landing page monopage sémantique et accessible
+├── index.html            # Page d'accueil & vitrine globale
+├── philosophie.html      # Page dédiée : Notre Manifeste & les 4 Piliers Slow-Tech
+├── activites.html        # Page dédiée : Ateliers Adultes & Fablab Junior (8-17 ans)
+├── infos.html            # Page dédiée : Infos pratiques, créneaux du samedi & tarifs
+├── contact.html          # Page dédiée : Formulaire d'adhésion & appel aux fondateurs
+├── mentions-legales.html # Page dédiée : Mentions légales & politique RGPD
 ├── style.css             # Feuille de styles CSS3 moderne (variables, flexbox/grid)
-├── script.js             # Interactions légères (menu mobile, smooth scroll, validation)
+├── script.js             # Interactions (menu hamburger slide-over, validation, détection de page)
 ├── logo.jpg              # Logo officiel 37dimensions (Cube Isométrique Circuit 37)
 ├── README.md             # Documentation du projet
 └── .gitignore            # Fichiers exclus du versionnement

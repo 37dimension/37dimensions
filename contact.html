@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Adhésion · 37dimensions | Rochecorbon</title>
+  <meta name="description" content="Rejoignez l'association 37dimensions à Rochecorbon : formulaire de contact, adhésion, appel aux membres fondateurs et inscription aux ateliers.">
+  <meta name="theme-color" content="#0a0c0d">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact &amp; Adhésion · 37dimensions Rochecorbon">
+  <meta property="og:description" content="Formulaire de contact et d'adhésion pour le micro-makerspace 37dimensions à Rochecorbon.">
+  <meta property="og:type" content="website">
+
+  <!-- Polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0c0d'/><path d='M16 4 L28 10.5 L28 23.5 L16 30 L4 23.5 L4 10.5 Z' stroke='%2358e6df' stroke-width='2' fill='none'/><path d='M16 4 L16 17 L28 10.5' stroke='%23c8ff46' stroke-width='2'/><path d='M16 17 L4 10.5' stroke='%23c8ff46' stroke-width='2'/><path d='M16 17 L16 30' stroke='%23ff5aa8' stroke-width='2'/></svg>">
+</head>
+<body>
+  <a href="#contenu-principal" class="skip-link">Passer directement au contenu</a>
+
+  <!-- En-tête / Barre de navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Accueil 37dimensions Rochecorbon">
+        <span class="brand-badge">
+          <img src="logo.jpg" alt="Logo 37dimensions" class="brand-logo-img">
+          <span class="mono brand-title-text">37DIMENSIONS</span>
+        </span>
+        <span class="brand-sub">· Rochecorbon</span>
+      </a>
+
+      <!-- Navigation Desktop -->
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-page="index">Accueil</a></li>
+          <li><a href="philosophie.html" class="nav-link" data-page="philosophie">Philosophie</a></li>
+          <li><a href="activites.html" class="nav-link" data-page="activites">Activités</a></li>
+          <li><a href="infos.html" class="nav-link" data-page="infos">Infos pratiques</a></li>
+          <li><a href="contact.html" class="nav-link active" data-page="contact" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-outline btn-sm active" aria-current="page">
+          <span>Rejoindre</span>
+          <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Bouton Menu Hamburger -->
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu de navigation" title="Menu principal">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Arrière-plan sombre -->
+    <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
+
+    <!-- Tiroir Mobile & Slide-over Navigation -->
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu principal">
+      <div class="mobile-nav-inner">
+        <div class="mobile-nav-header">
+          <div class="mobile-nav-brand">
+            <img src="logo.jpg" alt="Logo 37dimensions" class="brand-logo-img">
+            <div>
+              <div class="mono brand-title-text">37DIMENSIONS</div>
+              <div class="brand-sub">· Rochecorbon</div>
+            </div>
+          </div>
+          <button id="menu-close" class="mobile-nav-close" aria-label="Fermer le menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-nav-section-title mono text-cyan">// PAGES DÉDIÉES</div>
+
+        <ul class="mobile-nav-links">
+          <li>
+            <a href="index.html" class="mobile-nav-link" data-page="index">
+              <span class="link-num mono text-cyan">01</span>
+              <span class="link-text">
+                <span class="link-title">Accueil</span>
+                <span class="link-desc">Tiers-lieu &amp; découverte globale</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="philosophie.html" class="mobile-nav-link" data-page="philosophie">
+              <span class="link-num mono text-lime">02</span>
+              <span class="link-text">
+                <span class="link-title">Philosophie &amp; Manifeste</span>
+                <span class="link-desc">Nos 4 piliers &amp; la démarche Slow-Tech</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="activites.html" class="mobile-nav-link" data-page="activites">
+              <span class="link-num mono text-pink">03</span>
+              <span class="link-text">
+                <span class="link-title">Activités &amp; Ateliers</span>
+                <span class="link-desc">Pôle Adultes &amp; Fablab Junior (8-17 ans)</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="infos.html" class="mobile-nav-link" data-page="infos">
+              <span class="link-num mono text-yellow">04</span>
+              <span class="link-text">
+                <span class="link-title">Infos pratiques &amp; Tarifs</span>
+                <span class="link-desc">Créneaux du samedi, cotisations &amp; plan</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" class="mobile-nav-link active" data-page="contact" aria-current="page">
+              <span class="link-num mono text-cyan">05</span>
+              <span class="link-text">
+                <span class="link-title">Contact &amp; Adhésion</span>
+                <span class="link-desc">Rejoindre le noyau fondateur &amp; inscription</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="mobile-nav-footer">
+          <a href="contact.html" class="btn btn-primary btn-block">
+            <span>Rejoindre 37dimensions</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+          <div class="mobile-meta mono">
+            <span>📍 Rochecorbon (37210) · Indre-et-Loire</span>
+            <a href="mentions-legales.html" class="mobile-sublink">Mentions légales &amp; RGPD</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu-principal">
+
+    <!-- Hero de la Page Dédiée -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-inner">
+          <nav class="breadcrumb" aria-label="Fil d'Ariane">
+            <a href="index.html">Accueil</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current">Contact &amp; Adhésion</span>
+          </nav>
+
+          <span class="page-kicker mono text-lime">// 04. CONTACT &amp; ADHÉSION</span>
+          <h1 class="page-title">
+            Rejoignez l'Aventure : <br>
+            <span class="text-gradient">Construisons 37dimensions ensemble !</span>
+          </h1>
+          <p class="page-lead">
+            L'association est en phase de préfiguration active à Rochecorbon. Nous recherchons nos futurs adhérents, membres fondateurs, parents d'élèves et animateurs passionnés pour co-créer ce lieu unique.
+          </p>
+
+          <div class="page-badges">
+            <span class="badge badge-lime">🤝 Membres fondateurs bienvenus</span>
+            <span class="badge badge-cyan">✉️ Réponse sous 24/48h</span>
+            <span class="badge badge-pink">🔒 Données strictement confidentielles</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appel au Noyau Fondateur -->
+    <section class="section" style="padding-top: 40px; padding-bottom: 20px;">
+      <div class="container">
+        <div class="callout-founder">
+          <div class="founder-badge mono text-lime">// APPEL AU NOYAU FONDATEUR</div>
+          <h2 class="founder-title">
+            Chaque profil apporte sa dimension à notre atelier
+          </h2>
+          <p class="founder-lead">
+            Que vous ayez des décennies d'expérience manuelle ou zéro bagage technique, votre curiosité est notre plus grande richesse :
+          </p>
+          <div class="founder-profiles-grid">
+            <div class="profile-pill">
+              <span class="profile-emoji">👴👵</span>
+              <div>
+                <strong>Retraités &amp; Bricoleurs</strong>
+                <p>Partagez votre minutie et votre goût du travail soigné, tout en vous initiant à l'IA et au 3D sans complexe.</p>
+              </div>
+            </div>
+            <div class="profile-pill">
+              <span class="profile-emoji">🧒🎒</span>
+              <div>
+                <strong>Jeunes &amp; Collégiens</strong>
+                <p>Venez créer vos propres jeux, concevoir des robots et expérimenter l'impression 3D avec d'autres passionnés.</p>
+              </div>
+            </div>
+            <div class="profile-pill">
+              <span class="profile-emoji">🛠️💻</span>
+              <div>
+                <strong>Passionnés &amp; Makers</strong>
+                <p>Développeurs, concepteurs 3D ou électroniciennes souhaitant co-animer des séances et partager leur enthousiasme.</p>
+              </div>
+            </div>
+            <div class="profile-pill">
+              <span class="profile-emoji">🌱🔍</span>
+              <div>
+                <strong>Curieux &amp; Citoyens</strong>
+                <p>Comprenez les coulisses du numérique, apprenez à réparer vos petits appareils et participez à la vie du village.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulaire Interactif -->
+    <section class="section section-dark" id="formulaire">
+      <div class="container">
+        <div class="contact-box" style="max-width: 860px; margin: 0 auto;">
+          <div class="contact-box-header">
+            <h3 class="contact-form-title">Formulaire de Contact &amp; Pré-inscription</h3>
+            <p class="contact-form-subtitle">
+              Remplissez ce formulaire court pour être prévenu des prochaines rencontres à Rochecorbon, réserver votre place ou nous poser une question.
+            </p>
+          </div>
+
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/marin.depibrac@gmail.com" method="POST" novalidate>
+            <!-- Configuration FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="[37dimensions] Nouveau contact / Inscription">
+            <input type="hidden" name="_next" value="https://37dimension.github.io/37dimensions/contact.html">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom" class="form-label">Prénom <span class="required">*</span></label>
+                <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Ex: Camille" required>
+                <span class="error-msg" id="error-prenom">Veuillez renseigner votre prénom</span>
+              </div>
+              <div class="form-group">
+                <label for="nom" class="form-label">Nom <span class="required">*</span></label>
+                <input type="text" id="nom" name="nom" class="form-input" placeholder="Ex: Dupont" required>
+                <span class="error-msg" id="error-nom">Veuillez renseigner votre nom</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" class="form-label">Adresse email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="camille@exemple.fr" required>
+                <span class="error-msg" id="error-email">Veuillez renseigner une adresse email valide</span>
+              </div>
+              <div class="form-group">
+                <label for="telephone" class="form-label">Téléphone <span class="optional">(optionnel)</span></label>
+                <input type="tel" id="telephone" name="telephone" class="form-input" placeholder="06 12 34 56 78">
+              </div>
+            </div>
+
+            <!-- Choix du profil -->
+            <div class="form-group">
+              <label for="profil" class="form-label">Votre démarche principale <span class="required">*</span></label>
+              <select id="profil" name="profil" class="form-select" required>
+                <option value="" disabled selected>Sélectionnez votre profil...</option>
+                <option value="adulte-curieux">Adulte curieux / Débutant (apprendre l'IA, le 3D, le code)</option>
+                <option value="retraite-senior">Retraité / Senior (transmettre, bricoler, comprendre l'IA)</option>
+                <option value="parent-ado">Parent d'un jeune (pour le Fablab Junior 8-17 ans)</option>
+                <option value="jeune-ado">Jeune ou ado passionné (coding, robotique, stop-motion)</option>
+                <option value="maker-animateur">Maker / Animateur potentiel (envie de co-animer et aider)</option>
+                <option value="autre">Autre démarche / Curieux citoyen</option>
+              </select>
+              <span class="error-msg" id="error-profil">Veuillez choisir un profil</span>
+            </div>
+
+            <!-- Intérêts (cases à cocher stylisées) -->
+            <div class="form-group">
+              <label class="form-label">Sujets qui vous intéressent le plus :</label>
+              <div class="interests-grid">
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="IA" checked>
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Intelligence Artificielle</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="Impression 3D" checked>
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Impression 3D &amp; Vinyle</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="Electronique">
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Électronique &amp; Arduino</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="SlowTech">
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Slow-Tech &amp; Réparation</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="FablabJunior">
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Fablab Junior (8-17 ans)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Message libre -->
+            <div class="form-group">
+              <label for="message" class="form-label">Votre message, idées ou projets personnels <span class="optional">(optionnel)</span></label>
+              <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Dites-nous ce qui vous motive, vos attentes, ou le matériel que vous aimeriez utiliser à l'atelier..."></textarea>
+            </div>
+
+            <!-- Alerte d'erreur dynamique -->
+            <div id="form-error" class="form-error-box" hidden style="display: none;">
+              <div class="error-box-header">
+                <span class="error-icon">⚠️</span>
+                <strong>Une erreur est survenue lors de l'envoi direct.</strong>
+              </div>
+              <p class="error-box-desc">
+                Vous pouvez transmettre votre message directement par email à :
+              </p>
+              <a id="mail-fallback-btn" href="mailto:37dimension@gmail.com" class="btn btn-secondary btn-sm">
+                ✉️ Envoyer à 37dimension@gmail.com
+              </a>
+            </div>
+
+            <!-- Soumission -->
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
+                <span class="btn-text">Envoyer mon message / Pré-adhésion</span>
+                <span class="btn-loader"></span>
+              </button>
+              <p class="privacy-note mono">
+                🔒 Vos coordonnées restent strictement confidentielles et ne seront jamais transmises à des tiers.
+              </p>
+            </div>
+          </form>
+
+          <!-- Boîte de succès après soumission -->
+          <div id="form-success" class="form-success-box" hidden style="display: none;">
+            <div class="success-icon text-lime">✓</div>
+            <h4 class="success-title">Bienvenue dans l'aventure 37dimensions !</h4>
+            <p class="success-desc">
+              Votre message a été transmis avec succès à l'équipe. Nous vous recontacterons très vite avec les dates et détails de la prochaine rencontre fondatrice à Rochecorbon.
+            </p>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-reset-form">
+              Envoyer un autre message
+            </button>
+          </div>
+        </div>
+
+        <!-- Coordonnées Directes -->
+        <div style="margin-top: 60px; text-align: center;">
+          <div class="section-kicker mono text-cyan">// COORDONNÉES DIRECTES</div>
+          <p style="color: var(--text-secondary); margin-top: 8px;">
+            Vous préférez échanger par email directement ?
+          </p>
+          <div style="display: flex; justify-content: center; gap: 16px; margin-top: 16px; flex-wrap: wrap;">
+            <a href="mailto:37dimension@gmail.com" class="btn btn-secondary">
+              <span>✉️ 37dimension@gmail.com</span>
+            </a>
+            <a href="mailto:marin.depibrac@gmail.com" class="btn btn-secondary">
+              <span>✉️ marin.depibrac@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pied de page (Footer) -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <a href="index.html" class="brand-logo footer-logo">
+          <span class="brand-badge">
+            <img src="logo.jpg" alt="Logo 37dimensions" class="brand-logo-img">
+            <span class="mono brand-title-text">37DIMENSIONS</span>
+          </span>
+          <span class="brand-sub">· Rochecorbon</span>
+        </a>
+        <p class="footer-about">
+          Micro-makerspace intergénérationnel en Touraine. Un espace d'apprentissage libre pour explorer toutes les dimensions du numérique, réparer le matériel et fabriquer l'avenir ensemble.
+        </p>
+        <div class="footer-location mono">
+          📍 Rochecorbon (37210) · Indre-et-Loire (37)
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title mono">// NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="philosophie.html">Philosophie (4 piliers)</a></li>
+          <li><a href="activites.html">Activités Adultes &amp; Jeunes</a></li>
+          <li><a href="infos.html">Infos pratiques &amp; Tarifs</a></li>
+          <li><a href="contact.html">Rejoindre 37dimensions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title mono">// COMMUNAUTÉ</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:37dimension@gmail.com" class="link-contact">✉️ 37dimension@gmail.com</a></li>
+          <li><a href="mailto:marin.depibrac@gmail.com" class="link-contact">✉️ marin.depibrac@gmail.com</a></li>
+          <li><a href="contact.html">💬 Rejoindre le groupe de discussion</a></li>
+          <li><a href="infos.html">📅 Prochaines sessions du samedi</a></li>
+          <li><a href="contact.html">🤝 Devenir bénévole / Partenaire</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title mono">// VALEURS</h4>
+        <div class="footer-tags mono">
+          <span class="footer-chip">#37dimensions</span>
+          <span class="footer-chip">#TouraineMaker</span>
+          <span class="footer-chip">#SlowTech</span>
+          <span class="footer-chip">#OpenSource</span>
+          <span class="footer-chip">#Rochecorbon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright mono">
+          © 2026 37dimensions Rochecorbon · Association loi 1901 en constitution.
+        </p>
+        <div class="footer-bottom-links mono">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <span>·</span>
+          <span>Fait avec passion en Touraine (37)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton Retour en haut -->
+  <button id="back-to-top" class="back-to-top" aria-label="Retourner en haut de page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
